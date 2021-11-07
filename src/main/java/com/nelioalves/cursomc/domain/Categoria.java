@@ -2,10 +2,20 @@ package com.nelioalves.cursomc.domain;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Categoria implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-//atribustos
+	
+	@Id
+	//estratégia de geração automatica dos id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	//atributos
 	private Integer id;
 	private String nome;
 //construtor vazio - instacia objeto sem jogar nenhuma infor p os atributos
