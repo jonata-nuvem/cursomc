@@ -6,16 +6,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="categoria")
 public class Categoria implements Serializable{
-
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	//estratégia de geração automatica dos id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	//atributos
 	private Integer id;
 	private String nome;
 //construtor vazio - instacia objeto sem jogar nenhuma infor p os atributos
